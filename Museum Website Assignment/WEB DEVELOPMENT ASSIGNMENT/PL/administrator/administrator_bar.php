@@ -1,0 +1,3 @@
+            <output class="mainbar_button" name="username" id="username_display"> <?php echo $_SESSION['user_name']?> </output>
+            <a class="mainbar_button" id="logout_button" href="index.php?category=administrator&page=logout.php"> Logout </a> 
+
