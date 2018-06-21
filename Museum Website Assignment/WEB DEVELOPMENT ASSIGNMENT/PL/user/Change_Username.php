@@ -1,6 +1,6 @@
 <h1 class="page_title"> [CHANGE username PAGE] </h1> 
 <div>
-    <h3> USERNAME </h3>
+    <h3 class="paragraph_title"> USERNAME </h3>
     <?php echo $_SESSION['user_name'];
     if (isset($_SESSION['outcome'])) {
     if ($_SESSION['outcome'] == 1) {

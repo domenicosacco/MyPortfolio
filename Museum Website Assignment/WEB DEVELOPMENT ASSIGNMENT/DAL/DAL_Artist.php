@@ -78,12 +78,12 @@ class DAL_Artist{
         if(!(DAL_Artist::already_registered($Name))) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\artist\\uploads\\";
         $target_path = $target_path . basename($Artist_img_name);
-        //echo $Artist_path .'to' . $target_path . "<br>";
-        if (!move_uploaded_file($Artist_path, $target_path)) {
-        echo "There was an error uploading the file, please try again!";
-        }    
+        if (move_uploaded_file($Artist_path, $target_path)) {
         $Artist_data = base64_encode(file_get_contents($target_path));
         $Artist_data = 'data:image/jpg' . ';base64,' . $Artist_data;
+        }
+        else
+        {$Artist_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $stmt = $conn->prepare("INSERT INTO artist (Artist_name,Artist_description,Born_date,Death_date,Artist_image) "
@@ -162,12 +162,12 @@ class DAL_Artist{
         if(!DAL_Artist::already_is($idArtist, $Name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\artist\\uploads\\";
         $target_path = $target_path . basename($Artist_img_name);
-        //echo $Artist_path .'to' . $target_path . "<br>";
-        if (!move_uploaded_file($Artist_path, $target_path)) {
-        echo "There was an error uploading the file, please try again!";
-        }    
+        if (move_uploaded_file($Artist_path, $target_path)) {
         $Artist_data = base64_encode(file_get_contents($target_path));
         $Artist_data = 'data:image/jpg' . ';base64,' . $Artist_data;
+        }
+        else
+        {$Artist_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $stmt = $conn->prepare("UPDATE artist SET Artist_name=:Name,Artist_description=:Description,Born_date=:Born_date,Death_date=:Death_date,Artist_image=:Artist_image WHERE idArtist=:id");

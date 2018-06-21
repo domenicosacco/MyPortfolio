@@ -69,16 +69,12 @@ class DAL_Room{
             
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\room\\uploads\\";
         $target_path = $target_path . basename($Room_img_name);
-        //echo $Room_path .'to' . $target_path . "<br>";
         if (move_uploaded_file($Room_path, $target_path)) {
-        //echo "The file " . basename($Room_img_name) .
-        //" has been uploaded";
-         } else {
-        //echo "There was an error uploading the file, please try again!";
-        }    
         $Room_data = base64_encode(file_get_contents($target_path));
         $Room_data = 'data:image/jpg' . ';base64,' . $Room_data;
-        
+        }
+        else
+        {$Room_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $Museumid=DAL_Museum::retrieve_id_museum($Museum_name);
@@ -187,16 +183,12 @@ class DAL_Room{
             
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\room\\uploads\\";
         $target_path = $target_path . basename($Room_img_name);
-        //echo $Room_path .'to' . $target_path . "<br>";
         if (move_uploaded_file($Room_path, $target_path)) {
-        //echo "The file " . basename($Room_img_name) .
-        //" has been uploaded";
-         } else {
-        //echo "There was an error uploading the file, please try again!";
-        }    
         $Room_data = base64_encode(file_get_contents($target_path));
         $Room_data = 'data:image/jpg' . ';base64,' . $Room_data;
-
+        }
+        else
+        {$Room_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();        
         $MuseumID=DAL_Museum::retrieve_id_museum($Museum_name);

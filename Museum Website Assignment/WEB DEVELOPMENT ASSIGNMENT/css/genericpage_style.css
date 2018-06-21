@@ -1,7 +1,7 @@
 /* GENERIC LAYOUT STYILING FOR THE MAIN COMPONENT OF THE HTML PAGE */
 
 main {
-   background: lightskyblue; 
+   background: #A44; 
    font-family: Times New Roman;
    width: 100%;
 }
@@ -11,7 +11,7 @@ main {
 }
 
 .error_message {
-    color: red;
+    color: yellow;
 }
 
 .site_map_line {
@@ -22,11 +22,17 @@ color: grey;
 .page_title {
     text-align: center;
     font-weight: bold;
-    background: lightskyblue;
-    color: black;
+    background: #A44;
+    color: white;
     height: border-box;
     margin-top: 20px;
     font-size: 2em;
+    font-family: Arial;
+}
+
+.paragraph_title {
+    text-align: center;
+    color: white;
     font-family: Arial;
 }
 

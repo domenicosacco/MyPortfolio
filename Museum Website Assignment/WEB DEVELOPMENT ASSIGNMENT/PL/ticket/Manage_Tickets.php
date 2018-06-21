@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE TICKETS PAGE] </h1> 
-<h3> TICKET LIST </h3>
+<h3 class="paragraph_title"> TICKET LIST </h3>
 <div>
 <?php include("Ticket_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW TICKET </h3>
+<h3 class="paragraph_title"> INSERT NEW TICKET </h3>
 <div>
  <form class="user_data_form" action="index.php?category=ticket&page=Manage_Tickets.php" method="POST">
     Ticket type: 
@@ -41,7 +41,7 @@ if (isset($_SESSION['outcome'])) {
     <input type="submit" value="Create Ticket" name="create_ticket"> <br/>
  </form>
 </div>
-<h3> UPDATE TICKET </h3>
+<h3 class="paragraph_title"> UPDATE TICKET </h3>
 <div>
  <form class="user_data_form" action="index.php?category=ticket&page=Manage_Tickets.php" method="POST">
     <input type="number" name="update_ticket_id" class="input_text" placeholder="Enter update ticket ID" required> <br/>
@@ -61,7 +61,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Ticket" name="update_ticket"> <br/>
  </form>
 </div>
-<h3> DELETE TICKET </h3>
+<h3 class="paragraph_title"> DELETE TICKET </h3>
 <div>
  <form class="user_data_form" action="index.php?category=ticket&page=Manage_Tickets.php" method="POST">
      <input type="number" name="delete_ticket_id"  class="input_text" placeholder="Enter delete ticket ID" required> <br/>  

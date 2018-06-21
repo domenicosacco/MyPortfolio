@@ -61,7 +61,7 @@ close_button:visited
 }
 
 .lightbox_link {
-    color: blue;
+    color: #A22;
     font-weight: bold;
     text-decoration: none;
     font-size:0.8em;
@@ -104,8 +104,8 @@ close_button:visited
     height: 50px;
     margin-top:10px;
     margin-bottom: 20px;
-    background:blue;
-    border:2px solid blue;
+    background:#A22;
+    border:2px solid #A22;
     color: white;
     font-weight: bolder;
     font-size: 1.1em;
@@ -318,7 +318,7 @@ close_button:visited
     height: 37px;
     margin-top: 7px;
     margin-bottom: 15px;
-    border:1px solid blue;
+    border:1px solid #A22;
     font-size: 0.9em;
 }
 

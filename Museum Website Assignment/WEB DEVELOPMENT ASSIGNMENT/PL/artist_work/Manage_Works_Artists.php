@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE CONTRIBUTIONS PAGE] </h1> 
-<h3> WORKS AND ARTISTS LIST </h3>
+<h3 class="paragraph_title"> WORKS AND ARTISTS LIST </h3>
 <div>
 <?php include("Works_Artists_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW ARTIST FOR A WORK </h3>
+<h3 class="paragraph_title"> INSERT NEW ARTIST FOR A WORK </h3>
 <div>
  <form class="user_data_form" action="index.php?category=artist_work&page=Manage_Works_Artists.php" method="POST">
      <select name="new_artist_name">
@@ -32,7 +32,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Artist for a work" name="create_contribution"> <br/>
  </form>
 </div>
-<h3> UPDATE ARTIST FOR A WORK </h3>
+<h3 class="paragraph_title"> UPDATE ARTIST FOR A WORK </h3>
 <div>
  <form class="user_data_form" action="index.php?category=artist_work&page=Manage_Works_Artists.php" method="POST">
       <select name="update_artist_name">
@@ -45,7 +45,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Artist for a work" name="update_contribution"> <br/>
  </form>
 </div>
-<h3> DELETE ARTIST FOR A WORK </h3>
+<h3 class="paragraph_title"> DELETE ARTIST FOR A WORK </h3>
 <div>
  <form class="user_data_form" action="index.php?category=artist_work&page=Manage_Works_Artists.php" method="POST">
       <select name="delete_artist_name">

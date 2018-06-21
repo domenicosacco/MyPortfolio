@@ -50,11 +50,14 @@ class DAL_Website_User {
     
     function generate_password() {
                 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                $randstring = '';
-                for ($i = 0; $i < 15; $i++) {
-                $randstring = $randstring . $characters[rand(0, strlen($characters))];
-         }
-                return $randstring;
+    $characters_array=str_split($characters);
+    $randstring = '';
+    for ($i = 0; $i < 10; $i++) {
+        $position=rand(0, strlen($characters)-1);
+        $next_char=$characters_array[$position];
+        $randstring = $randstring . $next_char;
+    }
+    return $randstring;
         }
         
     function send_resetmail($mail,$new_password) {

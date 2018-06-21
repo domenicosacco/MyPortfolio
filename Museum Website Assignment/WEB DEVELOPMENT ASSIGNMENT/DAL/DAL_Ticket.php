@@ -229,7 +229,8 @@ class DAL_Ticket{
                 . "VALUES ('".$type."','".$person_name."','".$purchase_date."','" .$validity_date."','".$price."'," .$EventID."," .$BuyerID.")";  
         //echo "<br> SQL Statement: <br>" . $sql;
         $outcome=$stmt->rowCount();
-        if($outcome !== 0) {$array[0]=0;}
+        if($outcome !== 0) {$array[0]=0;
+        }
         else {$array[0]=1;}
         //echo "<br> Affected rows: " .$outcome;
         }

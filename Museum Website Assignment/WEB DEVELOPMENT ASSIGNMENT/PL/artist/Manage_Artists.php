@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE ARTISTS PAGE] </h1> 
-<h3> ARTIST LIST </h3>
+<h3 class="paragraph_title"> ARTIST LIST </h3>
 <div>
 <?php include("Artist_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW ARTIST </h3>
+<h3 class="paragraph_title"> INSERT NEW ARTIST </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=artist&page=Manage_Artists.php" method="POST">
      <input type="text" name="new_artist_name"  class="input_text" placeholder="Enter new artist name" required> <br/>
@@ -31,7 +31,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Artist" name="create_artist"> <br/>
  </form>
 </div>
-<h3> UPDATE ARTIST </h3>
+<h3 class="paragraph_title"> UPDATE ARTIST </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=artist&page=Manage_Artists.php" method="POST">
      <input type="number" name="updated_artist_id"  class="input_text" placeholder="Enter update artist ID" required> <br/>
@@ -44,7 +44,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Artist" name="update_artist"> <br/>
  </form>
 </div>
-<h3> DELETE ARTIST </h3>
+<h3 class="paragraph_title"> DELETE ARTIST </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=artist&page=Manage_Artists.php" method="POST">
      <input type="number" name="delete_artist_id"  class="input_text" placeholder="Enter delete artist ID" required> <br/>  

@@ -19,7 +19,7 @@
 }
 ?>
 </div>
-<h3> INSERT NEW USER </h3>
+<h3 class="paragraph_title"> INSERT NEW USER </h3>
 <div>
  <form class="user_data_form" action="index.php?category=administrator&page=Manage_Users.php" method="POST">
      <input type="text" name="new_user_name"  class="input_text" placeholder="Enter new username" required> <br/>
@@ -29,7 +29,7 @@
      <input type="submit" value="Create New User" name="new_user"> <br/>
  </form>
 </div>
-<h3> UPDATE USER </h3>
+<h3 class="paragraph_title"> UPDATE USER </h3>
 <div>
  <form class="user_data_form" action="index.php?category=administrator&page=Manage_Users.php" method="POST">
      <input type="number" name="updated_id"  class="input_text" placeholder="Enter username ID" required> <br/>
@@ -40,14 +40,14 @@
      <input type="submit" value="Update User" name="update_user"> <br/>
  </form>
 </div>
-<h3> DELETE USER </h3>
+<h3 class="paragraph_title"> DELETE USER </h3>
 <div>
  <form class="user_data_form" action="index.php?category=administrator&page=Manage_Users.php" method="POST">
      <input type="number" name="delete_user_id"  class="input_text" placeholder="Enter delete username ID" required> <br/>  
      <input  type="submit" value="Delete User" name="delete_user"> <br/>
  </form>
 </div>
-<h3> CREATE ADMINISTRATOR </h3>
+<h3 class="paragraph_title"> CREATE ADMINISTRATOR </h3>
 <div>
  <form class="user_data_form" action="index.php?category=administrator&page=Manage_Users.php" method="POST">
      <input type="text" name="admin_name"  class="input_text" placeholder="Enter new username" required> <br/>

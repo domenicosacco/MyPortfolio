@@ -36,6 +36,9 @@ class TicketController {
             $a_ticket=new Ticket("",$_POST['ticket_type'],$_POST['owner_name'] . "-" . $_POST['document_id'],$_POST['event_name'],$_SESSION['user_id'],date ("Y-m-d H:i:s"));
             $a_ticket->{'create_ticket'}();
             $_SESSION['outcome']=$a_ticket->getOperation_status();
+            if ($_SESSION['outcome']==0) {
+                $a_ticket->{'send_ticket'}($_SESSION['user_mail']);
+                }
         }
     }
     

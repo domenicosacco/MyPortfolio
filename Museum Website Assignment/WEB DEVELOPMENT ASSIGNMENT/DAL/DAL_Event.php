@@ -24,7 +24,7 @@ class DAL_Event{
     $db_conn=new DB();
     $conn=$db_conn->connect(); 
     $stmt = $conn->prepare("SELECT Event_name FROM event WHERE idEvent=:id");
-    $stmt->bindParam(":idEvent", $id);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
     $previous_name=$stmt->fetchColumn();
     if ($Event_name==$previous_name) {return false;}
@@ -79,15 +79,12 @@ class DAL_Event{
         if(!DAL_Event::already_registered($name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\event\\uploads\\";
         $target_path = $target_path . basename($Event_img_name);
-        echo $Event_path .'to' . $target_path . "<br>";
-        if (!move_uploaded_file($Event_path, $target_path)) {
-        //echo "The file " . basename($Event_img_name) .
-        //" has been uploaded";
-         } else {
-        echo "There was an error uploading the file, please try again!";
-        }    
+        if (move_uploaded_file($Event_path, $target_path)) {
         $Event_data = base64_encode(file_get_contents($target_path));
         $Event_data = 'data:image/jpg' . ';base64,' . $Event_data;
+        }
+        else
+        {$Event_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $Museumid=DAL_Museum::retrieve_id_museum($Museum_name);
@@ -231,15 +228,12 @@ class DAL_Event{
         if(!DAL_Event::already_is($id,$name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\event\\uploads\\";
         $target_path = $target_path . basename($Event_img_name);
-        //echo $Event_path .'to' . $target_path . "<br>";
         if (move_uploaded_file($Event_path, $target_path)) {
-        //echo "The file " . basename($Event_img_name) .
-        //" has been uploaded";
-         } else {
-        echo "There was an error uploading the file, please try again!";
-        }    
         $Event_data = base64_encode(file_get_contents($target_path));
         $Event_data = 'data:image/jpg' . ';base64,' . $Event_data;
+        }
+        else
+        {$Event_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $Museumid=DAL_Museum::retrieve_id_museum($Museum_name);

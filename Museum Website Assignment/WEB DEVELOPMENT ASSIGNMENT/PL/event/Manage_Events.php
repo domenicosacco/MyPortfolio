@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE EVENTS PAGE] </h1> 
-<h3> EVENT LIST </h3>
+<h3 class="paragraph_title"> EVENT LIST </h3>
 <div>
 <?php include("Event_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW EVENT </h3>
+<h3 class="paragraph_title"> INSERT NEW EVENT </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=event&page=Manage_Events.php" method="POST">
      <input type="datetime" name="new_event_startdate" class="input_text" placeholder="Enter new event start date (yyyy-mm-dd hh:mm)" required> <br/>
@@ -38,7 +38,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Event" name="create_event"> <br/>
  </form>
 </div>
-<h3> UPDATE EVENT </h3>
+<h3 class="paragraph_title"> UPDATE EVENT </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=event&page=Manage_Events.php" method="POST">
      <input type="num" name="update_event_id"  class="input_text" placeholder="Enter updated event ID" required> <br/>
@@ -58,7 +58,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Event" name="update_event"> <br/>
  </form>
 </div>
-<h3> DELETE EVENT </h3>
+<h3 class="paragraph_title"> DELETE EVENT </h3>
 <div>
  <form class="user_data_form" action="index.php?category=event&page=Manage_Events.php" method="POST">
      <input type="number" name="delete_event_id"  class="input_text" placeholder="Enter delete event ID" required> <br/>  

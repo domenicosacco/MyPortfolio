@@ -1,6 +1,6 @@
 <h1 class="page_title"> [CHANGE DESCRIPTION PAGE] </h1> 
 <div>
-    <h3> USER DESCRIPTION </h3>
+    <h3 class="paragraph_title"> USER DESCRIPTION </h3>
  <?php echo $_SESSION['user_description'];
             if (isset($_SESSION['outcome'])) {
     if ($_SESSION['outcome'] == 1) {

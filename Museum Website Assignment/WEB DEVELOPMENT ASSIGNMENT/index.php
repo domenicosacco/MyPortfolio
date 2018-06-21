@@ -63,6 +63,11 @@ if(!isset($_SESSION['visitor_identifier'])) {$_SESSION['visitor_identifier']= Ra
         <img class="header_image" src="./resources/header_image.jpg" alt="Image not supported by web browser">
         </header>
         <div class="main_bar" >
+                     <?php
+         if($_SESSION['access']==1) {include('./PL/user/user_bar.php');} 
+         else if($_SESSION['access']==2) {include('./PL/administrator/administrator_bar.php');} 
+         else {include('./PL/visitor/visitor_bar.php');} 
+         ?>
             <nav class="navigation_bar"> 
                     <a class="nav_link" href="index.php?category=visitor&page=home.php">Home </a> 
                     <a class="nav_link" href="index.php?category=visitor&page=FAQ.php">FAQs </a> 
@@ -70,11 +75,6 @@ if(!isset($_SESSION['visitor_identifier'])) {$_SESSION['visitor_identifier']= Ra
                     <a class="nav_link" href="index.php?category=visitor&page=Museum_Map.php">Museum Map </a> 
                     <a class="nav_link" href="index.php?category=visitor&page=Terms_Use.php">Terms of Use </a>
             </nav>
-         <?php
-         if($_SESSION['access']==1) {include('./PL/user/user_bar.php');} 
-         else if($_SESSION['access']==2) {include('./PL/administrator/administrator_bar.php');} 
-         else {include('./PL/visitor/visitor_bar.php');} 
-         ?>
         </div>
         <div class="container">
             <aside class="sidebar_menu"> 

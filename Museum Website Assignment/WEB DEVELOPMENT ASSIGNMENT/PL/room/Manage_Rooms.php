@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE ROOMS PAGE] </h1> 
-<h3> ROOM LIST </h3>
+<h3 class="paragraph_title"> ROOM LIST </h3>
 <div>
 <?php include("Room_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW ROOM </h3>
+<h3 class="paragraph_title"> INSERT NEW ROOM </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=room&page=Manage_Rooms.php" method="POST">
      <input type="number" name="new_room_floor"  class="input_text" placeholder="Enter new room floor" required> <br/>
@@ -34,7 +34,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Room" name="create_room"> <br/>
  </form>
 </div>
-<h3> UPDATE ROOM </h3>
+<h3 class="paragraph_title"> UPDATE ROOM </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=room&page=Manage_Rooms.php" method="POST">
      <input type="number" name="update_room_id"  class="input_text" placeholder="Enter updated room ID" required> <br/>
@@ -50,7 +50,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Room" name="update_room"> <br/>
  </form>
 </div>
-<h3> DELETE ROOM </h3>
+<h3 class="paragraph_title"> DELETE ROOM </h3>
 <div>
  <form class="user_data_form" action="index.php?category=room&page=Manage_Rooms.php" method="POST">
      <input type="number" name="delete_room_id"  class="input_text" placeholder="Enter delete room ID" required> <br/>  

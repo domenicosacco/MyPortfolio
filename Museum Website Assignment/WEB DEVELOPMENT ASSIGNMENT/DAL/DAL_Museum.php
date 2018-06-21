@@ -23,7 +23,7 @@ class DAL_Museum{
         $db_conn=new DB();
         $conn=$db_conn->connect(); 
         $stmt = $conn->prepare("SELECT Museum_name FROM museum WHERE idMuseum=:id");
-        $stmt->bindParam(":idMuseum", $id);
+        $stmt->bindParam(":id", $id);
         $stmt->execute();
         $previous_name=$stmt->fetchColumn();
         if ($Museum_name==$previous_name) {return false;}
@@ -133,15 +133,12 @@ class DAL_Museum{
         if(!DAL_Museum::already_registered($name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\museum\\uploads\\";
         $target_path = $target_path . basename($Museum_img_name);
-        //echo $Museum_path .'to' . $target_path . "<br>";
         if (move_uploaded_file($Museum_path, $target_path)) {
-        //echo "The file " . basename($Museum_img_name) .
-        //" has been uploaded";
-         } else {
-        echo "There was an error uploading the file, please try again!";
-        }    
         $Museum_data = base64_encode(file_get_contents($target_path));
         $Museum_data = 'data:image/jpg' . ';base64,' . $Museum_data;
+        }
+        else
+        {$Museum_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $stmt = $conn->prepare("INSERT INTO museum (Museum_name,address,Telephone_number,Mail,Museum_info,Museum_image) VALUES (:name,:address,:Telephone_number,:mail,:info,:Museum_image)");
@@ -172,15 +169,12 @@ class DAL_Museum{
         if(!DAL_Museum::already_is($id, $name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\museum\\uploads\\";
         $target_path = $target_path . basename($Museum_img_name);
-        //echo $Museum_path .'to' . $target_path . "<br>";
         if (move_uploaded_file($Museum_path, $target_path)) {
-        //echo "The file " . basename($Museum_img_name) .
-        //" has been uploaded";
-         } else {
-        echo "There was an error uploading the file, please try again!";
-        }    
         $Museum_data = base64_encode(file_get_contents($target_path));
         $Museum_data = 'data:image/jpg' . ';base64,' . $Museum_data;
+        }
+        else
+        {$Museum_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $stmt = $conn->prepare("UPDATE museum SET Museum_name=:name, Address=:address, Telephone_number=:Telephone_number, Mail=:mail, Museum_info=:info, Museum_image=:Museum_image WHERE idMuseum=:id");

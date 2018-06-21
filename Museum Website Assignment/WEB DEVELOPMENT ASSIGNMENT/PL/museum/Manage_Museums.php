@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE MUSEUMS PAGE] </h1> 
-<h3> MUSEUM LIST </h3>
+<h3 class="paragraph_title"> MUSEUM LIST </h3>
 <div>
 <?php include("Museum_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW MUSEUM </h3>
+<h3 class="paragraph_title"> INSERT NEW MUSEUM </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=museum&page=Manage_Museums.php" method="POST">
      <input type="text" name="new_museum_name" class="input_text" placeholder="Enter new museum name" required> <br/>
@@ -32,7 +32,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Museum" name="create_museum"> <br/>
  </form>
 </div>
-<h3> UPDATE MUSEUM </h3>
+<h3 class="paragraph_title"> UPDATE MUSEUM </h3>
 <div>
  <form class="user_data_form" enctype="multipart/form-data" action="index.php?category=museum&page=Manage_Museums.php" method="POST">
      <input type="number" name="updated_museum_id" class="input_text" placeholder="Enter updated museum ID" required> <br/>
@@ -46,7 +46,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Museum" name="update_museum"> <br/>
  </form>
 </div>
-<h3> DELETE MUSEUM </h3>
+<h3 class="paragraph_title"> DELETE MUSEUM </h3>
 <div>
  <form class="user_data_form" action="index.php?category=museum&page=Manage_Museums.php" method="POST">
      <input type="number" name="delete_museum_id"  class="input_text" placeholder="Enter delete museum ID" required> <br/>  

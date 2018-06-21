@@ -109,11 +109,28 @@ class Ticket {
     function create_ticket() {
     $array=DAL_Ticket::{"create_ticket"}($this->type,$this->person_name,$this->Event_name,$this->BuyerID);
     $this->operation_status=$array[0];
-    $this->validity_date=$array[1];
-    $this->purchase_date=$array[2];
+    $this->purchase_date=$array[1];
+    $this->validity_date=$array[2];
     $this->price=$array[3];
    } 
    
+    function send_ticket($mail) {
+            $msg = "Hello, this is the ticket you bought: <br> <br>";
+            $msg .= '<b> Event Name: </b>' . $this->Event_name . '  <br>';
+            $msg .= '<b> Event Date: </b>' . $this->validity_date . '<br>';
+            $msg .= '<b> Customer name and ID: </b>' . $this->person_name. '<br>';
+            $msg .= '<b> Ticket Price: </b>' . $this->price. '$<br>';
+                $msg .= '<b> Purchase Date: </b>' . $this->purchase_date . '<br>';
+            // use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg,70);
+
+            // send email
+               $headers = 'From: webmaster@whateverdomain.com' . "\r\n" .
+    'Reply-To: webmaster@whateverdomain.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion() . "MIME-Version: 1.0\r\n" . "Content-Type: text/html; charset=UTF-8\r\n";
+               $outcome=mail($mail,"Museum website ticket",$msg,$headers);
+        }
+        
     function raw_create_ticket() {
     $array=DAL_Ticket::{"raw_create_ticket"}($this->type,$this->person_name,$this->Event_name,$this->BuyerID,$this->purchase_date,$this->validity_date,$this->price);
     $this->operation_status=$array[0];

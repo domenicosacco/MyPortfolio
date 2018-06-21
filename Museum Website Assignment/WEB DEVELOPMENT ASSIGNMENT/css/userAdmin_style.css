@@ -4,20 +4,20 @@
     width: 22%;
     height: 35px;
     color: white;
-    background: #66cc00;
+    background: #511;
     vertical-align: middle;
     text-align: center;
     line-height: 35px;
 }
 
 #logout_button {
-    background: green;
+    background: #511;
     font-family: Arial;
     font-style: italic;
 }
 
 #logout_button:hover {
-    background: darkgreen;
+    background: #A55;
 }
 
 .panel_title {

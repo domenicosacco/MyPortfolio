@@ -1,6 +1,6 @@
 <h1 class="page_title"> [CHANGE PASSWORD PAGE] </h1> 
 <div>
-    <h3> USER PASSWORD </h3>
+    <h3 class="paragraph_title"> USER PASSWORD </h3>
     <?php echo $_SESSION['password'];
     if (isset($_SESSION['outcome'])) {
     if ($_SESSION['outcome'] == 1) {

@@ -11,7 +11,10 @@
                         <li> <a href="index.php?category=ticket&page=Manage_Tickets.php"> Manage Tickets </a>  </li>
                         <li> <a href="index.php?category=artist_work&page=Manage_Works_Artists.php"> Manage Artist and Works </a>  </li>
                         <li> <a href="index.php?category=event_artist&page=Manage_Event_Artists.php"> Manage Events and Artists </a>  </li>
-                        <br>
+                        </ul>
+                        <h4 class="panel_title"> Profile Options </h4>
+                        <ul class="option_list">
+                        <li> <a href="index.php?category=user&page=user_info.php"> Profile Info </a> </li>
                         <li> <a href="index.php?category=user&page=Change_Username.php"> Change username </a> </li>
                         <li> <a href="index.php?category=user&page=Change_Password.php"> Change password </a> </li>
                         <li> <a href="index.php?category=user&page=Change_Description.php"> Change description </a> </li>

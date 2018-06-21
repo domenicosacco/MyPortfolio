@@ -29,6 +29,7 @@ class MasterController {
     
     public static function process() {
        //echo 'Master Controller Called <br>';
+       AdministratorController::create_predef_admin();
        VisitorController::process();
        
        if(isset($_GET['category'])) {

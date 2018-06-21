@@ -66,16 +66,13 @@ class DAL_Work{
         try{
         if(!DAL_Work::already_registered($name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\work\\uploads\\";
-        $target_path = $target_path . basename($Work_img_name);
-        //echo $Work_path .'to' . $target_path . "<br>";
+        $target_path = $target_path . basename($Work_img_name);  
         if (move_uploaded_file($Work_path, $target_path)) {
-        //echo "The file " . basename($Work_img_name) .
-        //" has been uploaded";
-         } else {
-        //echo "There was an error uploading the file, please try again!";
-        }    
         $Work_data = base64_encode(file_get_contents($target_path));
         $Work_data = 'data:image/jpg' . ';base64,' . $Work_data;
+        }
+        else
+        {$Work_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $roomID=DAL_Room::retrieve_id_room($Room_name);
@@ -202,15 +199,13 @@ class DAL_Work{
         try{
         if(!DAL_Work::already_is($workID, $name)) {
         $target_path = dirname(dirname(__FILE__)) . "\\PL\\work\\uploads\\";
-        $target_path = $target_path . basename($Work_img_name);
+        $target_path = $target_path . basename($Work_img_name);  
         if (move_uploaded_file($Work_path, $target_path)) {
-        //echo "The file " . basename($Work_img_name) .
-        //" has been uploaded";
-         } else {
-        //echo "There was an error uploading the file, please try again!";
-        }    
         $Work_data = base64_encode(file_get_contents($target_path));
         $Work_data = 'data:image/jpg' . ';base64,' . $Work_data;
+        }
+        else
+        {$Work_data ="";}
         $db_conn=new DB();
         $conn=$db_conn->connect();
         $roomID=DAL_Room::retrieve_id_room($Room_name);

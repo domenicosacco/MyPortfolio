@@ -1,5 +1,5 @@
 <h1 class="page_title"> [MANAGE PARTICIPATIONS PAGE] </h1> 
-<h3> EVENTS AND ARTISTS LIST </h3>
+<h3 class="paragraph_title"> EVENTS AND ARTISTS LIST </h3>
 <div>
 <?php include("Event_Artists_list.php");
 if (isset($_SESSION['outcome'])) {
@@ -19,7 +19,7 @@ if (isset($_SESSION['outcome'])) {
 }
 ?>
 </div>
-<h3> INSERT NEW ARTIST FOR AN EVENT </h3>
+<h3 class="paragraph_title"> INSERT NEW ARTIST FOR AN EVENT </h3>
 <div>
  <form class="user_data_form" action="index.php?category=event_artist&page=Manage_Event_Artists.php" method="POST">
       <select name="new_artist_name">
@@ -34,7 +34,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Create New Participation for the event" name="create_participation"> <br/>
  </form>
 </div>
-<h3> UPDATE ARTIST FOR AN EVENT </h3>
+<h3 class="paragraph_title"> UPDATE ARTIST FOR AN EVENT </h3>
 <div>
  <form class="user_data_form" action="index.php?category=event_artist&page=Manage_Event_Artists.php" method="POST">
       <select name="update_artist_name">
@@ -49,7 +49,7 @@ if (isset($_SESSION['outcome'])) {
      <input type="submit" value="Update Participation for the event" name="update_participation"> <br/>
  </form>
 </div>
-<h3> DELETE ARTIST FOR AN EVENT </h3>
+<h3 class="paragraph_title"> DELETE ARTIST FOR AN EVENT </h3>
 <div>
  <form class="user_data_form" action="index.php?category=event_artist&page=Manage_Event_Artists.php" method="POST">
       <select name="delete_artist_name">

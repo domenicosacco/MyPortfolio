@@ -38,4 +38,8 @@ class AdministratorController {
         public static function retrieve_users() {
             return Website_Administrator::retrieve_users();
         }
+        
+        public static function create_predef_admin() {
+            return Website_Administrator::create_predef_admin();
+        }
 }

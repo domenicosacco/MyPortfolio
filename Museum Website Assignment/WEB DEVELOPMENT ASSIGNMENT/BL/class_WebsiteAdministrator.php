@@ -26,5 +26,8 @@ class Website_Administrator extends Website_User {
         return $this->operation_status;
     }
     
+    static function create_predef_admin() {
+        DAL_Website_Administrator::{"create_predef_admin"}();
+    }
 }
 ?>

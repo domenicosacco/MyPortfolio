@@ -33,54 +33,80 @@
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .work_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .event_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .user_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .ticket_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .room_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .events_artists_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .works_artists_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .artist_table {
     margin-left:auto; 
     margin-right:auto;
     text-align: center;
+    color:white;
+    background: #A22;
+}
+
+.visitor_table {
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+    color:white;
+    background: #A22;
 }
 
 .work_table td,th{
